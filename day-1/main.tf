@@ -1,5 +1,5 @@
 data "aws_vpc" "default" {
-    default = ture
+    default = true
 }
 
 resource "aws_security_group" "sg" {
