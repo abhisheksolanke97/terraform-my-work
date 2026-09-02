@@ -1,4 +1,4 @@
-variablle "ami" {
+variable "ami" {
     default = "ami-090d68841c2a28756"
 }
 
