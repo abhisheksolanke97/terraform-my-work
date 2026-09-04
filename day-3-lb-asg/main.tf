@@ -48,7 +48,7 @@ resource "aws_lb_target_group" "tg" {
 resource "aws_lb" "lb" {
     name = "ALB"
     load_balancer_type = "application"
-    subnets = ["subnet-05b2840f19ad5821c","subnet-01bed4d0e2f0c2f7f"]
+    subnets = ["subnet-0ff1392625e333bf4","subnet-0a9dcf0969af63047"]
     internet = false
     security_groups = [aws_security_group.sg.id]
 }
@@ -79,7 +79,7 @@ resource "aws_autoscalling_group" "asg" {
     min_size = 2
     max_size = 10
     target_group_arns = [aws_lb_taget_group.tg.arn]
-    vpc_zone_identifier = ["subnet-05b2840f19ad5821c","subnet-01bed4d0e2f0c2f7f"]
+    vpc_zone_identifier = ["subnet-0ff1392625e333bf4","subnet-0a9dcf0969af63047"]
     launch_template {
         id = aws_launch_template.lt.id
         version = "$Latest"
