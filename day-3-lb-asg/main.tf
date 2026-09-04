@@ -9,7 +9,7 @@ resource "aws_security_group" "sg" {
     vpc_id = data.aws_vpc.default.id 
 
     ingress {
-        form_port = 80
+        from_port = 80
         to_port = 80 
         protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"]
@@ -73,7 +73,7 @@ resource "aws_launch_template" "lt" {
     user_data = filebase64("/root/terraform-my-work/day-3-lb-asg/user_data.sh")
 }
 
-resource "aws_autoscalling_group" "asg" {
+resource "aws_autoscaling_group" "asg" {
     name = "ASG"
     desired_capacity = 2 
     min_size = 2
