@@ -48,7 +48,7 @@ resource "aws_lb_target_group" "tg" {
 resource "aws_lb" "lb" {
     name = "ALB"
     load_balancer_type = "application"
-    subnets = ["subnet-0ff1392625e333bf4","subnet-0a9dcf0969af63047"]
+    subnets = ["subnet-05b2840f19ad5821c","subnet-01bed4d0e2f0c2f7f"]
     internet = false
     security_groups = [aws_security_group.sg.id]
 }
