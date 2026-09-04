@@ -84,5 +84,5 @@ resource "aws_autoscaling_group" "asg" {
         id = aws_launch_template.lt.id
         version = "$Latest"
     }
-    health_chech_type = "ELB"
+    health_check_type = "ELB"
 }
