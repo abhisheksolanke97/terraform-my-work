@@ -3,7 +3,7 @@ resource "aws_instance" "public_instance" {
     instance_type = var.instance_type
     key_name = var.key_name
     subnet_id = var.public_subnet_id 
-    vpc_security_group_ids = var.sg_id 
+    vpc_security_group_ids = [var.sg_id]
     associate_public_ip_address = true 
     user_data = file("/root/terraform-my-work/day-5-terraform-var-file/user_data.sh")
     tags = {
@@ -16,7 +16,7 @@ resource "aws_instance" "private_instance" {
     instance_type = var.instance_type
     key_name = var.key_name
     subnet_id = var.private_subnet_id
-    vpc_security_group_ids = var.sg_id
+    vpc_security_group_ids = [var.sg_id]
     associate_public_ip_address = false
     user_data = file("/root/terraform-my-work/day-5-terraform-var-file/user_data.sh")
     tags = {
