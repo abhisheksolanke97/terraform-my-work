@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
     backend "s3" {
-        bucket = "abhishek.space4657"
+        bucket = "abhishek.space"
         region = "us-west-2"
         profile = "dev"
         use_lockfile = true 
