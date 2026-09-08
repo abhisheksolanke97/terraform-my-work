@@ -8,3 +8,7 @@ resource "aws_instance" "public_instance" {
         Name = "public_instance"
     }
 }
+
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "my-terraform-bucket-123456789"
+}
