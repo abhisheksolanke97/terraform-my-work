@@ -3,7 +3,7 @@ resource "aws_instance" "public_instance" {
     instance_type = "t3.micro"
     key_name = "key0"
     count = 2
-    vpc_security_group_ids = ["sg-08675da805eab2644"]
+    vpc_security_group_ids = ["sg-087725dcecb9b6183"]
     tags = {
         Name = "public_instance"
     }
