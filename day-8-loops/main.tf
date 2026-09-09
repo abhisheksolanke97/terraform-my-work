@@ -1,4 +1,4 @@
-resource "aws_instane" "ec2" {
+resource "aws_instance" "ec2" {
     for_each = tomap({
         server-1 = "t3.micro"
         server-2 = "t3.small"
