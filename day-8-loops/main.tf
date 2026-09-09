@@ -5,9 +5,9 @@ resource "aws_instance" "ec2" {
         server-3 = "c7i-flex.large"
     })
     ami = "ami-0bea529386a62a2ad"
-    instance_type = echo.value 
+    instance_type = each.value 
     key_name = "key0" 
     tags = {
-        Name = echo.key 
+        Name = each.key 
     }
 }
